@@ -2,10 +2,10 @@ import { Component } from '@angular/core'
 
 @Component({
     selector: 'events-list',
-    templateUrl:'./events-list.component.html'
+    templateUrl:'events-list.component.html'
 })
 export class EventsListComponent{
-    event = {
+    eventDetails = {
         id: 1, 
         name: 'Angular Connect',
         date: '6/24/2020',
@@ -17,5 +17,9 @@ export class EventsListComponent{
             city: 'Dhaka',
             country: 'Bangladesh'
         }
+    }
+
+    clickedMeHander($event: any) {
+        console.log("received:", $event)
     }
 }
