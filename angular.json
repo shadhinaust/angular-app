@@ -28,6 +28,7 @@
               "src/styles.css"
             ],
             "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
@@ -124,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "ng-fundameltals"
+  "defaultProject": "ng-fundameltals",
+  "cli": {
+    "analytics": false
+  }
 }
