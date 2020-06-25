@@ -1,5 +1,9 @@
 <div>
     <h2>Upcoming events</h2>
     <hr/>
-    <event-thumbnail (clickMe)="clickedMeHander($event)" [eventDetails]="eventDetails"></event-thumbnail>
+    <div class="row">
+        <div class="col-md-6" style="padding: 12px;" *ngFor="let eventDetails of events">
+            <event-thumbnail [eventDetails]="eventDetails"></event-thumbnail>
+        </div>
+    </div>
 </div>

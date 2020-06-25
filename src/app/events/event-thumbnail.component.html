@@ -1,12 +1,21 @@
-<div class="hoverwell thumbnail">
-    <h2>{{eventDetails.name}}</h2>
-    <div>Date: {{eventDetails.date}}</div>
-    <div>Time: {{eventDetails.time}}</div>
-    <div>Price: ${{eventDetails.price}}</div>
-    <div>
-        <span>Location: {{eventDetails.location.address}},</span>
-        <span>&nbsp;</span>
-        <span>{{eventDetails.location.city}}, {{eventDetails.location.country}}</span>
+<div class="card" style="background-color:gray;">
+    <div class="card-body" style="height: 16rem;">
+        <h2>{{eventDetails?.name}}</h2>
+        <div>Date: {{eventDetails?.date}}</div>
+        <div [ngClass]="getStartTimeClass()" [ngSwitch]="eventDetails?.time">
+            Time: {{eventDetails?.time}}
+            <span *ngSwitchCase="'8:00 am'">(Early Start)</span>
+            <span *ngSwitchCase="'10:00 am'">(Late Start)</span>
+            <span *ngSwitchDefault>(Normal Start)</span>
+        </div>
+        <div>Price: ${{eventDetails?.price}}</div>
+        <div *ngIf="eventDetails?.location">
+            <span>Location: {{eventDetails?.location.address}},</span>
+            <span>&nbsp;</span>
+            <span>{{eventDetails?.location.city}}, {{eventDetails?.location.country}}</span>
+        </div>
+        <div *ngIf="eventDetails?.onlineUrl">
+            <span>Online Url: {{eventDetails?.onlineUrl}}</span>
+        </div>
     </div>
-    <button class="btn btn-primary" (click)="handleClickMe()">Click me!</button>
 </div>
