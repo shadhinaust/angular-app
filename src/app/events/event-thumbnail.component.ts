@@ -2,7 +2,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
 
 @Component({
     selector: 'event-thumbnail',
-    templateUrl:'event-thumbnail.component.html',
+    templateUrl:'./event-thumbnail.component.html',
     styles:[`
     .green { color: green !important;}
     .blue { color: blue !important;}

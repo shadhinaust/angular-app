@@ -1,4 +1,5 @@
-<div class="card" style="background-color:gray;">
+<div class="card" style="background-color:gray;"
+[routerLink]="['/events', eventDetails.id]">
     <div class="card-body" style="height: 16rem;">
         <h2>{{eventDetails?.name}}</h2>
         <div>Date: {{eventDetails?.date}}</div>
